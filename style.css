@@ -6,6 +6,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* --- REGRA PARA A FONTE PERSONALIZADA --- */
+@font-face {
+    font-family: 'Genty';
+    src: url('fonts/genty/GentyDemo-Regular.otf') format('opentype'),
+         url('fonts/genty/GentyDemo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -31,18 +40,27 @@ body {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #6B4F4F;
     text-decoration: none;
     display: flex;
     align-items: center;
+    gap: 15px; /* Adiciona um espaço entre o texto e a imagem da logo */
 }
 
+/* --- MUDANÇA APLICADA AQUI --- */
+.logo-text {
+    font-family: 'Genty', sans-serif; /* Aplica a fonte personalizada */
+    font-size: 2.8rem; /* Ajuste o tamanho conforme o seu gosto */
+    color: #f1af67;
+    font-weight: normal; /* A fonte já é decorativa, não precisa de negrito */
+}
+
+/* Esconde a imagem da logo por padrão */
 .logo img {
     height: 55px;
     width: auto;
+    display: none; /* Você pode reativar se quiser mostrar a imagem E o texto */
 }
+/* ------------------------------- */
 
 .navbar a {
     font-size: 1.1rem;
@@ -81,8 +99,18 @@ section { padding: 6rem 7% 2rem; }
     color: #FFFFFF;
 }
 
-.hero-content h1 { font-size: 3.5rem; font-weight: 700; }
-.hero-content p { font-size: 1.2rem; margin: 1rem 0 2rem; }
+/* --- TÍTULO PRINCIPAL DE VOLTA AO PADRÃO --- */
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif; /* Revertido para a fonte padrão */
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+/* ------------------------------------------- */
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem;
+}
 
 .btn-primary {
     background-color: #EAB676;
@@ -92,9 +120,9 @@ section { padding: 6rem 7% 2rem; }
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    border: none; /* Adicionado para botões de formulário */
-    cursor: pointer; /* Adicionado para botões de formulário */
-    font-size: 1rem; /* Adicionado para botões de formulário */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .btn-primary:hover { background-color: #d8a159; }
@@ -152,7 +180,6 @@ section { padding: 6rem 7% 2rem; }
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* --- ESTILO PARA O NOVO FORMULÁRIO DE CONTATO --- */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -169,7 +196,6 @@ section { padding: 6rem 7% 2rem; }
 }
 .contact-form button { width: 100%; }
 .whatsapp-contact { margin-top: 2rem; }
-/* ------------------------------------------- */
 
 .btn-whatsapp {
     display: inline-block;
@@ -216,5 +242,8 @@ section { padding: 6rem 7% 2rem; }
     .navbar.active { left: 0; }
     .navbar a { margin: 1rem 0; font-size: 1.2rem; }
     section { padding: 4rem 5% 2rem; }
-    .hero-content h1 { font-size: 2.5rem; }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 }
