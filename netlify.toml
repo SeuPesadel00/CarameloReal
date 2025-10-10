@@ -1,0 +1,17 @@
+# Arquivo de configuração para o Netlify
+
+[build]
+  # O diretório que o Netlify deve servir. Como nosso site está na raiz, usamos "."
+  publish = "."
+
+# [[redirects]] é a regra para redirecionamento/proxy
+[[redirects]]
+  # O caminho que seu JavaScript vai chamar no frontend
+  from = "/api/*"
+  # O endereço do seu futuro backend no Render. Use o URL que o Render te fornecer.
+  # Este é um URL de exemplo.
+  to = "https://caramelo-real-backend.onrender.com/:splat"
+  # Status 200 significa que é um proxy (OK), não um redirecionamento (301).
+  status = 200
+  # Force a regra a ser aplicada mesmo que exista um arquivo no caminho 'from'
+  force = true

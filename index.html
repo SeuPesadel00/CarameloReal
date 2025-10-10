@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caramelo Real - Os melhores pudins e sobremesas artesanais. Faça sua encomenda!">
+    <title>Caramelo Real👑 - Pudins Artesanais</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="assets/5.png" alt="Logo Caramelo Real">
+        </a>
+        <nav class="navbar">
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <div class="menu-hamburger" id="menu-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1>O Sabor da Realeza em Cada Fatia</h1>
+                <p>Descubra nossos pudins cremosos e mousses aveludadas, feitos com os melhores ingredientes.</p>
+                <a href="#produtos" class="btn-primary">Ver Nossas Delícias</a>
+            </div>
+        </section>
+
+        <section id="produtos" class="products-section">
+            <h2>Nossas Delícias</h2>
+            <div class="products-container" id="products-container">
+                <div class="product-card">
+                    <img src="assets/pudim1.jpg" alt="Pudim de Leite Condensado">
+                    <h3>Pudim de Leite Condensado</h3>
+                    <p>O clássico irresistível, com uma calda de caramelo brilhante e sabor inconfundível.</p>
+                    <span class="price">R$ 45,00</span>
+                </div>
+                <div class="product-card">
+                    <img src="assets/pudim2.jpg" alt="Pudim de Chocolate">
+                    <h3>Pudim de Chocolate Belga</h3>
+                    <p>Cremoso e intenso, feito com chocolate belga 70% para os verdadeiros amantes de cacau.</p>
+                    <span class="price">R$ 55,00</span>
+                </div>
+                <div class="product-card">
+                    <img src="assets/pudim3.jpg" alt="Mousse de Maracujá">
+                    <h3>Mousse de Maracujá Real</h3>
+                    <p>Leve, aerada e com o equilíbrio perfeito entre o doce e o azedo. Finalizada com calda fresca.</p>
+                    <span class="price">R$ 35,00</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="sobre" class="about-section">
+            <div class="about-content">
+                <h2>A História por Trás do Sabor</h2>
+                <p>A Caramelo Real nasceu de uma paixão familiar por sobremesas que aquecem o coração. Cada pudim é feito de forma artesanal, seguindo receitas passadas por gerações, mas com um toque de modernidade. Usamos apenas ingredientes frescos e de alta qualidade para garantir uma experiência real em cada colherada.</p>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <h2>Faça sua Encomenda</h2>
+            <p>Envie uma mensagem pelo formulário abaixo ou, se preferir, chame direto no WhatsApp!</p>
+            
+            <form name="encomendas" method="POST" data-netlify="true" class="contact-form">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" rows="5" placeholder="Qual delícia você gostaria de encomendar?" required></textarea>
+                <button type="submit" class="btn-primary">Enviar Pedido</button>
+            </form>
+            
+            <div class="whatsapp-contact">
+                <p>Prefere contato rápido?</p>
+                <a href="https://api.whatsapp.com/send?phone=SEUNUMERO&text=Olá! Gostaria de fazer uma encomenda." class="btn-whatsapp" target="_blank">
+                    Encomendar via WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Caramelo Real👑. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
