@@ -43,24 +43,21 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 15px; /* Adiciona um espaço entre o texto e a imagem da logo */
+    gap: 15px;
 }
 
-/* --- MUDANÇA APLICADA AQUI --- */
 .logo-text {
-    font-family: 'Genty', sans-serif; /* Aplica a fonte personalizada */
-    font-size: 2.5rem; /* Ajuste o tamanho conforme o seu gosto */
+    font-family: 'Genty', sans-serif;
+    font-size: 2.5rem;
     color: #f1af67;
-    font-weight: normal; /* A fonte já é decorativa, não precisa de negrito */
+    font-weight: normal;
 }
 
-/* Esconde a imagem da logo por padrão */
 .logo img {
     height: 55px;
     width: auto;
-    display: none; /* Você pode reativar se quiser mostrar a imagem E o texto */
+    display: none;
 }
-/* ------------------------------- */
 
 .navbar a {
     font-size: 1.1rem;
@@ -73,7 +70,6 @@ body {
 
 .navbar a:hover { color: #EAB676; }
 
-/* --- MENU HAMBURGUER (PARA MOBILE) --- */
 .menu-hamburger { display: none; cursor: pointer; }
 .menu-hamburger span {
     display: block;
@@ -84,28 +80,38 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* --- ESTILOS DAS SEÇÕES --- */
+/* --- ESTILOS DAS SEÇÕES (PÁGINA PRINCIPAL) --- */
 section { padding: 6rem 7% 2rem; }
 
+/* --- SEÇÃO INICIAL (HERO) - CÓDIGO ATUALIZADO AQUI --- */
 .hero-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #FFFFFF;
-}
+    color: #FFFFFF; /* Garante que o texto seja branco */
 
-/* --- TÍTULO PRINCIPAL DE VOLTA AO PADRÃO --- */
+    /* A MÁGICA ACONTECE AQUI */
+    /* 1. Camada escura para contraste | 2. Sua imagem de fundo */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/PUDIMBACKGROUND.png');
+
+    /* 3. Garante que a imagem cubra todo o espaço sem distorcer */
+    background-size: cover;
+
+    /* 4. Centraliza a imagem vertical e horizontalmente */
+    background-position: center center;
+
+    /* 5. EFEITO PARALLAX: Fixa a imagem no lugar enquanto a página rola */
+    background-attachment: fixed;
+}
+/* ----------------------------------------------------------- */
+
 .hero-content h1 {
-    font-family: 'Poppins', sans-serif; /* Revertido para a fonte padrão */
+    font-family: 'Poppins', sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
 }
-/* ------------------------------------------- */
 
 .hero-content p {
     font-size: 1.2rem;
@@ -147,6 +153,7 @@ section { padding: 6rem 7% 2rem; }
     text-align: center;
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
 }
 .product-card:hover {
     transform: translateY(-10px);
@@ -163,10 +170,10 @@ section { padding: 6rem 7% 2rem; }
 .product-card p { font-size: 1rem; padding: 0.5rem 0; }
 .product-card .price {
     display: block;
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #EAB676;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 /* Seção Sobre e Contato */
@@ -179,7 +186,6 @@ section { padding: 6rem 7% 2rem; }
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -196,7 +202,6 @@ section { padding: 6rem 7% 2rem; }
 }
 .contact-form button { width: 100%; }
 .whatsapp-contact { margin-top: 2rem; }
-
 .btn-whatsapp {
     display: inline-block;
     margin-top: 1rem;
@@ -209,7 +214,6 @@ section { padding: 6rem 7% 2rem; }
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
 }
-
 .btn-whatsapp:hover { background-color: #1EBE57; }
 
 /* Rodapé */
@@ -220,7 +224,7 @@ section { padding: 6rem 7% 2rem; }
     padding: 1.5rem 7%;
 }
 
-/* --- RESPONSIVIDADE PARA CELULARES --- */
+/* --- RESPONSIVIDADE PARA CELULARES (PÁGINA PRINCIPAL) --- */
 @media (max-width: 768px) {
     .header { padding: 1rem 5%; }
     .menu-hamburger { display: block; }
@@ -242,8 +246,135 @@ section { padding: 6rem 7% 2rem; }
     .navbar.active { left: 0; }
     .navbar a { margin: 1rem 0; font-size: 1.2rem; }
     section { padding: 4rem 5% 2rem; }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
+    .hero-content h1 { font-size: 2.5rem; }
+
+    /* Desativa o efeito parallax em celulares, pois pode causar problemas de performance */
+    .hero-section {
+        background-attachment: scroll;
+    }
+}
+
+/*
+================================================================================
+| --- ESTILOS PARA AS PÁGINAS DE PRODUTO ---
+================================================================================
+*/
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+
+.product-detail-section {
+    padding: 8rem 7% 4rem;
+    background-color: #FFFFFF;
+}
+
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-image-gallery {
+    flex: 1 1 400px;
+}
+
+.product-image-gallery img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-info-details {
+    flex: 1 1 500px;
+}
+
+.product-info-details h1 {
+    font-size: 2.8rem;
+    color: #6B4F4F;
+    margin-bottom: 1rem;
+}
+
+.product-info-details .product-intro-desc {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.price-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #EAB676;
+    margin-bottom: 2rem;
+}
+
+.btn-encomendar {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.product-tabs h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #EAB676;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.product-tabs ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.product-tabs ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.nutrition-table td {
+    border: 1px solid #f0e9dc;
+    padding: 0.8rem;
+}
+
+.nutrition-table td:first-child {
+    font-weight: 600;
+    background-color: #FFF8EA;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .product-info-details h1 {
+        font-size: 2.2rem;
     }
 }
