@@ -49,7 +49,7 @@ body {
 /* --- MUDANÇA APLICADA AQUI --- */
 .logo-text {
     font-family: 'Genty', sans-serif; /* Aplica a fonte personalizada */
-    font-size: 2.8rem; /* Ajuste o tamanho conforme o seu gosto */
+    font-size: 2.5rem; /* Ajuste o tamanho conforme o seu gosto */
     color: #f1af67;
     font-weight: normal; /* A fonte já é decorativa, não precisa de negrito */
 }
