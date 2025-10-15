@@ -190,20 +190,6 @@ section { padding: 6rem 7% 2rem; }
     font-size: 1rem;
 }
 .contact-form button { width: 100%; }
-.whatsapp-contact { margin-top: 2rem; }
-.btn-whatsapp {
-    display: inline-block;
-    margin-top: 1rem;
-    background-color: #25D366;
-    color: #FFFFFF;
-    padding: 0.8rem 2.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-}
-.btn-whatsapp:hover { background-color: #1EBE57; }
 
 /* Rodapé */
 .footer {
@@ -244,11 +230,110 @@ section { padding: 6rem 7% 2rem; }
 | --- ESTILOS PARA AS PÁGINAS DE PRODUTO ---
 ================================================================================
 */
-.product-link{text-decoration:none;color:inherit;display:flex}.product-detail-section{padding:8rem 7% 4rem;background-color:#fff}.product-detail-container{display:flex;flex-wrap:wrap;gap:3rem;max-width:1200px;margin:0 auto}.product-image-gallery{flex:1 1 400px}.product-image-gallery img{width:100%;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,.1)}.product-info-details{flex:1 1 500px}.product-info-details h1{font-size:2.8rem;color:#6B4F4F;margin-bottom:1rem}.product-info-details .product-intro-desc{font-size:1.1rem;margin-bottom:1.5rem}.price-detail{display:flex;flex-direction:column;gap:.5rem;font-size:1.3rem;font-weight:600;color:#EAB676;margin-bottom:2rem}.btn-encomendar{width:100%;text-align:center;margin-bottom:2.5rem}.product-tabs h2{font-size:1.5rem;border-bottom:2px solid #EAB676;padding-bottom:.5rem;margin-top:2rem;margin-bottom:1rem}.product-tabs ul{list-style:none;padding-left:0}.product-tabs ul li{margin-bottom:.5rem;font-size:1rem}.nutrition-table{width:100%;border-collapse:collapse;margin-top:1rem}.nutrition-table td{border:1px solid #f0e9dc;padding:.8rem}.nutrition-table td:first-child{font-weight:600;background-color:#FFF8EA}.video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;background:#000;border-radius:10px;margin-top:1rem}.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}@media (max-width:768px){.product-info-details h1{font-size:2.2rem}}
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+.product-detail-section {
+    padding: 8rem 7% 4rem;
+    background-color: #FFFFFF;
+}
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.product-image-gallery {
+    flex: 1 1 400px;
+}
+.product-image-gallery img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.product-info-details {
+    flex: 1 1 500px;
+}
+.product-info-details h1 {
+    font-size: 2.8rem;
+    color: #6B4F4F;
+    margin-bottom: 1rem;
+}
+.product-info-details .product-intro-desc {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+.price-detail {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #EAB676;
+    margin-bottom: 2rem;
+}
+.btn-encomendar {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.product-tabs h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #EAB676;
+    padding-bottom: .5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.product-tabs ul {
+    list-style: none;
+    padding-left: 0;
+}
+.product-tabs ul li {
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.nutrition-table td {
+    border: 1px solid #f0e9dc;
+    padding: .8rem;
+}
+.nutrition-table td:first-child {
+    font-weight: 600;
+    background-color: #FFF8EA;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width:768px) {
+    .product-info-details h1 {
+        font-size: 2.2rem;
+    }
+}
 
 /*
 ================================================================================
-| --- NOVOS ESTILOS PARA ÍCONES DE REDES SOCIAIS ---
+| --- ESTILOS PARA ÍCONES DE REDES SOCIAIS ---
 ================================================================================
 */
 .direct-contact {
@@ -296,11 +381,16 @@ section { padding: 6rem 7% 2rem; }
     color: #FFFFFF;
 }
 
+/*
+================================================================================
+| --- ESTILOS PARA A PÁGINA DE SUCESSO ---
+================================================================================
+*/
 .success-page-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 70vh; /* Ocupa a maior parte da tela */
+    min-height: 70vh;
     text-align: center;
     background-color: #FFFFFF;
     padding: 4rem 7%;
