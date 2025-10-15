@@ -6,6 +6,10 @@
     <meta name="description" content="Caramelo Real - Os melhores pudins e sobremesas artesanais. Faça sua encomenda!">
     <title>Caramelo Real👑 - Pudins Artesanais</title>
     
+    <link rel="icon" type="image/png" href="assets/Caramelofav1.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,25 +115,34 @@
                 <p>A Caramelo Real nasceu de uma paixão familiar por sobremesas que aquecem o coração. Cada pudim é feito de forma artesanal, seguindo receitas passadas por gerações, mas com um toque de modernidade. Usamos apenas ingredientes frescos e de alta qualidade para garantir uma experiência real em cada colherada.</p>
             </div>
         </section>
-
+        
         <section id="contato" class="contact-section">
             <h2>Faça sua Encomenda</h2>
-            <p>Envie uma mensagem pelo formulário abaixo ou, se preferir, chame direto no WhatsApp!</p>
+            <p>Envie uma mensagem pelo formulário abaixo ou entre em contato pelas nossas redes!</p>
             
-            <form name="encomendas" method="POST" data-netlify="true" class="contact-form">
+            <form name="encomendas" method="POST" data-netlify="true" action="/obrigado.html" class="contact-form">
                 <input type="text" name="nome" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
                 <textarea name="mensagem" rows="5" placeholder="Qual delícia você gostaria de encomendar?" required></textarea>
                 <button type="submit" class="btn-primary">Enviar Pedido</button>
             </form>
             
-            <div class="whatsapp-contact">
-                <p>Prefere contato rápido?</p>
-                <a href="https://api.whatsapp.com/send?phone=SEUNUMERO&text=Olá! Gostaria de fazer uma encomenda." class="btn-whatsapp" target="_blank">
-                    Encomendar via WhatsApp
-                </a>
+            <div class="direct-contact">
+                <h3>Contato Direto e Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/caramelo_reaal?igsh=MXZvc2JwMG9xbzRxMA==" target="_blank" aria-label="Link para o Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5561992963118" target="_blank" aria-label="Link para o WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" target="_blank" aria-label="Link para enviar um E-mail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
