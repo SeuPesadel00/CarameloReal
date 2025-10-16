@@ -52,11 +52,12 @@ Este projeto foi desenvolvido e configurado por: Arthur Henrique Gomes de Olivei
 
 * [Fluxo de Caixa](https://github.com/SeuPesadel00/Fluxo-de-Caixa)
 * [Curriculo Interativo](https://github.com/SeuPesadel00/Curriculo-Interativo)
-* [Capital Daark](https://github.com/SeuPesadel00/CapitalDaark-new)
+* [Caramelo Real](https://github.com/SeuPesadel00/CarameloReal)
 * [Portifolio Sofia](https://github.com/SeuPesadel00/Portfolio-SofiaOliveira)
 
 **Contatos:**
 
+* [Meu curriculo](https://curriculo-interativo-arthur.vercel.app/)
 * [LinkedIn](https://www.linkedin.com/in/arthur-henriquee/)
 * [GitHub](https://github.com/SeuPesadel00)
 * [WhatsApp](https://wa.me/5561981076848)
