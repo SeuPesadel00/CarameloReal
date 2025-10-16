@@ -341,19 +341,16 @@ section { padding: 6rem 7% 2rem; }
     border-top: 1px solid #f0e9dc;
     padding-top: 2rem;
 }
-
 .direct-contact h3 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
-
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
 }
-
 .social-icons a {
     display: flex;
     align-items: center;
@@ -365,18 +362,15 @@ section { padding: 6rem 7% 2rem; }
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .social-icons i {
     font-size: 1.8rem;
     color: #EAB676;
     transition: color 0.3s ease;
 }
-
 .social-icons a:hover {
     background-color: #EAB676;
     transform: translateY(-5px);
 }
-
 .social-icons a:hover i {
     color: #FFFFFF;
 }
@@ -395,15 +389,69 @@ section { padding: 6rem 7% 2rem; }
     background-color: #FFFFFF;
     padding: 4rem 7%;
 }
-
 .success-content h1 {
     font-size: 2.8rem;
     color: #6B4F4F;
     margin-bottom: 1rem;
 }
-
 .success-content p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto 2rem;
+}
+
+/* ================================================================================
+| --- NOVOS ESTILOS PARA O FORMULÁRIO DE PEDIDO (DESIGN ALTERNATIVO) ---
+================================================================================
+*/
+.product-order-fieldset {
+    border: none;
+    border-top: 2px solid #f0e9dc;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.product-order-fieldset legend {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #6B4F4F;
+    padding: 0 1rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.product-order-list {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em uma única coluna */
+    gap: 0.8rem; /* Espaço entre cada item da lista */
+    margin-top: 1rem;
+}
+
+.product-order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f0e9dc; /* Linha sutil separando os itens */
+}
+
+.product-order-item:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.product-order-item label {
+    font-weight: 500;
+    color: #6B4F4F;
+    text-align: left;
+}
+
+.quantity-input {
+    width: 65px;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6B4F4F;
 }
