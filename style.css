@@ -29,7 +29,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 7%;
+    /* ALTERAÇÃO FEITA AQUI: A altura fixa e o padding foram ajustados */
+    height: 100px;
+    padding:  2%;
     background-color: rgba(255, 248, 234, 0.9);
     display: flex;
     justify-content: space-between;
@@ -43,20 +45,16 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
-.logo-text {
-    font-family: 'Genty', sans-serif;
-    font-size: 2.5rem;
-    color: #f1af67;
-    font-weight: normal;
-}
+/* O estilo .logo-text foi removido pois não é mais necessário */
 
+/* Estilo para a IMAGEM da logo */
 .logo img {
-    height: 55px;
+    /* ALTERAÇÃO FEITA AQUI: Altura da logo maior que a do header */
+    height: 200px; 
     width: auto;
-    display: none;
+    display: block;
 }
 
 .navbar a {
@@ -70,6 +68,7 @@ body {
 
 .navbar a:hover { color: #EAB676; }
 
+/* ... (O restante do código que você já tinha continua igual) ... */
 .menu-hamburger { display: none; cursor: pointer; }
 .menu-hamburger span {
     display: block;
@@ -79,10 +78,7 @@ body {
     background-color: #6B4F4F;
     transition: all 0.3s ease-in-out;
 }
-
-/* --- ESTILOS DAS SEÇÕES (PÁGINA PRINCIPAL) --- */
 section { padding: 6rem 7% 2rem; }
-
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -95,18 +91,15 @@ section { padding: 6rem 7% 2rem; }
     background-position: center center;
     background-attachment: fixed;
 }
-
 .hero-content h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
 }
-
 .hero-content p {
     font-size: 1.2rem;
     margin: 1rem 0 2rem;
 }
-
 .btn-primary {
     background-color: #EAB676;
     color: #FFFFFF;
@@ -119,10 +112,7 @@ section { padding: 6rem 7% 2rem; }
     cursor: pointer;
     font-size: 1rem;
 }
-
 .btn-primary:hover { background-color: #d8a159; }
-
-/* Seção de Produtos */
 .products-section { text-align: center; }
 .products-section h2, .about-section h2, .contact-section h2 {
     font-size: 2.5rem;
@@ -164,8 +154,6 @@ section { padding: 6rem 7% 2rem; }
     color: #EAB676;
     margin-top: 0.5rem;
 }
-
-/* Seção Sobre e Contato */
 .about-section, .contact-section {
     background-color: #FFFFFF;
     text-align: center;
@@ -190,18 +178,15 @@ section { padding: 6rem 7% 2rem; }
     font-size: 1rem;
 }
 .contact-form button { width: 100%; }
-
-/* Rodapé */
 .footer {
     background-color: #6B4F4F;
     color: #FFF8EA;
     text-align: center;
     padding: 1.5rem 7%;
 }
-
-/* --- RESPONSIVIDADE PARA CELULARES (PÁGINA PRINCIPAL) --- */
 @media (max-width: 768px) {
-    .header { padding: 1rem 5%; }
+    .header { height: 60px; padding: 0 5%; }
+    .logo img { height: 75px; }
     .menu-hamburger { display: block; }
     .menu-hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .menu-hamburger.active span:nth-child(2) { opacity: 0; }
@@ -224,12 +209,6 @@ section { padding: 6rem 7% 2rem; }
     .hero-content h1 { font-size: 2.5rem; }
     .hero-section { background-attachment: scroll; }
 }
-
-/*
-================================================================================
-| --- ESTILOS PARA AS PÁGINAS DE PRODUTO ---
-================================================================================
-*/
 .product-link {
     text-decoration: none;
     color: inherit;
@@ -269,14 +248,14 @@ section { padding: 6rem 7% 2rem; }
 .price-detail {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 0.5rem;
     font-size: 1.3rem;
     font-weight: 600;
     color: #EAB676;
     margin-bottom: 2rem;
 }
 .btn-encomendar {
-    width: 100%;
+    display: inline-block;
     text-align: center;
     margin-bottom: 2.5rem;
 }
@@ -330,12 +309,6 @@ section { padding: 6rem 7% 2rem; }
         font-size: 2.2rem;
     }
 }
-
-/*
-================================================================================
-| --- ESTILOS PARA ÍCONES DE REDES SOCIAIS ---
-================================================================================
-*/
 .direct-contact {
     margin-top: 2.5rem;
     border-top: 1px solid #f0e9dc;
@@ -374,12 +347,6 @@ section { padding: 6rem 7% 2rem; }
 .social-icons a:hover i {
     color: #FFFFFF;
 }
-
-/*
-================================================================================
-| --- ESTILOS PARA A PÁGINA DE SUCESSO ---
-================================================================================
-*/
 .success-page-section {
     display: flex;
     align-items: center;
@@ -399,59 +366,83 @@ section { padding: 6rem 7% 2rem; }
     max-width: 600px;
     margin: 0 auto 2rem;
 }
-
-/* ================================================================================
-| --- NOVOS ESTILOS PARA O FORMULÁRIO DE PEDIDO (DESIGN ALTERNATIVO) ---
-================================================================================
-*/
-.product-order-fieldset {
+.product-choice-fieldset {
     border: none;
-    border-top: 2px solid #f0e9dc;
     margin-top: 1.5rem;
-    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0;
 }
-
-.product-order-fieldset legend {
+.product-choice-fieldset legend {
     font-weight: 600;
     font-size: 1.2rem;
     color: #6B4F4F;
-    padding: 0 1rem;
-    margin: 0 auto;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 1rem;
+    width: 100%;
 }
-
-.product-order-list {
+.product-choice-list {
     display: flex;
-    flex-direction: column; /* Organiza os itens em uma única coluna */
-    gap: 0.8rem; /* Espaço entre cada item da lista */
-    margin-top: 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
 }
-
-.product-order-item {
+.product-choice-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #f0e9dc; /* Linha sutil separando os itens */
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid #f0e9dc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
-
-.product-order-item:last-child {
-    border-bottom: none; /* Remove a linha do último item */
+.product-choice-item:hover {
+    background-color: #fcf9f2;
 }
-
-.product-order-item label {
-    font-weight: 500;
+.product-checkbox {
+    display: none;
+}
+.product-icon {
+    font-size: 1.5rem;
     color: #6B4F4F;
-    text-align: left;
+    width: 24px;
+    text-align: center;
+    transition: color 0.2s ease-in-out;
 }
-
+.product-name {
+    font-weight: 500;
+    flex-grow: 1;
+    text-align: left;
+    transition: color 0.2s ease-in-out;
+}
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+.quantity-selector label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
 .quantity-input {
-    width: 65px;
-    padding: 0.5rem;
+    width: 60px;
+    padding: 0.4rem;
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 6px;
-    font-size: 1rem;
+}
+.product-choice-item:has(.product-checkbox:checked) {
+    background-color: #FFF8EA;
+    border-color: #EAB676;
+}
+.product-choice-item:has(.product-checkbox:checked) .product-icon,
+.product-choice-item:has(.product-checkbox:checked) .product-name {
+    color: #b9813e;
     font-weight: 600;
-    color: #6B4F4F;
+}
+.product-choice-item:has(.product-checkbox:checked) .quantity-selector {
+    opacity: 1;
+    pointer-events: auto;
 }

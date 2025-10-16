@@ -18,27 +18,16 @@ navLinks.forEach(link => {
 });
 
 
-// --- CÓDIGO PARA O FUTURO BACKEND ---
-// Esta função é um EXEMPLO de como você buscaria os produtos do seu backend.
-// Ela não vai funcionar agora, pois o backend não existe, mas o código já está pronto.
-
+// --- CÓDIGO PARA O FUTURO BACKEND (INTACTO) ---
 async function carregarProdutosDoBackend() {
     try {
-        // Graças ao proxy no netlify.toml, podemos chamar um caminho local.
-        // O Netlify vai redirecionar a chamada para o seu backend no Render.
         const response = await fetch('/api/produtos');
-        
         if (!response.ok) {
             throw new Error(`Erro na rede: ${response.statusText}`);
         }
-        
         const produtos = await response.json();
         const container = document.getElementById('products-container');
-
-        // Limpa os produtos estáticos que estão no HTML
-        container.innerHTML = ''; 
-
-        // Cria os cards de produto dinamicamente com os dados do backend
+        container.innerHTML = '';
         produtos.forEach(produto => {
             const card = document.createElement('div');
             card.className = 'product-card';
@@ -50,13 +39,34 @@ async function carregarProdutosDoBackend() {
             `;
             container.appendChild(card);
         });
-
     } catch (error) {
         console.error('Falha ao carregar produtos do backend:', error);
-        // Se a chamada falhar, os produtos estáticos do HTML continuarão visíveis.
     }
 }
-
-// Quando a página carregar, a função abaixo será chamada.
-// Para ATIVAR, remova as duas barras "//" da linha abaixo quando seu backend estiver no ar.
 // window.addEventListener('DOMContentLoaded', carregarProdutosDoBackend);
+
+
+// ================================================================================
+// | --- NOVO SCRIPT PARA GALERIA DE IMAGENS NA PÁGINA DE PRODUTO ---
+// ================================================================================
+// Esta função só vai rodar se estivermos em uma página de produto
+document.addEventListener('DOMContentLoaded', () => {
+    const mainImage = document.getElementById('main-product-image');
+    const thumbnails = document.querySelectorAll('.thumbnail-image');
+
+    // Se não encontrar os elementos (está na página inicial), a função para.
+    if (!mainImage || thumbnails.length === 0) {
+        return;
+    }
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+            // Remove a classe 'active' de todas as miniaturas
+            thumbnails.forEach(item => item.classList.remove('active'));
+            // Adiciona a classe 'active' na miniatura clicada
+            this.classList.add('active');
+            // Troca a imagem principal pela imagem da miniatura que foi clicada
+            mainImage.src = this.src;
+        });
+    });
+});

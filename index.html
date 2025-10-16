@@ -17,7 +17,7 @@
 
     <header class="header">
         <a href="#" class="logo">
-            <span class="logo-text">Caramelo Real 👑</span>
+            <img src="assets/logo3.png" alt="Logo Caramelo Real">
         </a>
         <nav class="navbar">
             <a href="#inicio">Início</a>
@@ -43,14 +43,14 @@
         <section id="produtos" class="products-section">
             <h2>Nossas Delícias</h2>
             <div class="products-container" id="products-container">
-                <a href="pudim-leite-condensado.html" class="product-link"><div class="product-card"><img src="assets/pudimtradicional.png" alt="Pudim de Leite Condensado"><h3>Pudim de Leite Condensado</h3><p>O clássico irresistível.</p><span class="price">Inteiro 1Kg - R$ 60,00</span><span class="price">Unidade 250ml - R$ 12,00</span></div></a>
+                 <a href="pudim-leite-condensado.html" class="product-link"><div class="product-card"><img src="assets/pudimtradicional.png" alt="Pudim de Leite Condensado"><h3>Pudim de Leite Condensado</h3><p>O clássico irresistível.</p><span class="price">Inteiro 1Kg - R$ 60,00</span><span class="price">Unidade 250ml - R$ 12,00</span></div></a>
                 <a href="pudim-chocolate.html" class="product-link"><div class="product-card"><img src="assets/pudimbelga.png" alt="Pudim de Chocolate"><h3>Pudim de Chocolate Belga</h3><p>Cremoso e intenso.</p><span class="price">Inteiro 1Kg - R$ 65,00</span><span class="price">Unidade 250ml - R$ 12,00</span></div></a>
                 <a href="mousse-maracuja.html" class="product-link"><div class="product-card"><img src="assets/moussemaracujatrad.png" alt="Mousse de Maracujá"><h3>Mousse de Maracujá Real</h3><p>Leve, aerada e com o equilíbrio perfeito.</p><span class="price">Inteiro 1Kg - R$ 45,00</span><span class="price">Unidade 200ml - R$ 12,00</span></div></a>
                 <a href="mousse-limao.html" class="product-link"><div class="product-card"><img src="assets/mousselimaotrad.png" alt="Mousse de Limão"><h3>Mousse de Limão Real</h3><p>Leve, aerada e com o equilíbrio perfeito entre o doce e o azedo.</p><span class="price"> Inteiro 1Kg - R$ 40,00</span><span class="price"> Unidade 200Ml - R$ 12,00</span></div></a>
                 <a href="salada-frutas.html" class="product-link"><div class="product-card"><img src="assets/saladafrutas.png" alt="Salada de Frutas"><h3>Salada de Frutas Imperial</h3><p>Uma explosão de cores e sabores.</p><span class="price">Inteiro 1Kg - R$ 35,00</span><span class="price">Unidade 250ml - R$ 45,00</span></div></a>
                 <a href="bolo-tapioca.html" class="product-link"><div class="product-card"><img src="assets/bolotapioca.png" alt="Bolo de Tapioca"><h3>Bolo de Tapioca Tradicional</h3><p>Sabor autêntico do Brasil.</p><span class="price">Inteiro 1KgR$ 35,00</span><span class="price">Unidade 250ml - R$ 45,00</span></div></a>
                 <a href="manjar-dos-deuses.html" class="product-link"><div class="product-card"><img src="assets/manjar.png" alt="Bolo de Tapioca"><h3>Manjar Real dos Deuses</h3><p>Sabor intenso da Realeza.</p><span class="price">Inteiro 1KgR$ 70,00</span><span class="price">Unidade 250ml - R$ 15,00</span></div></a>
-                <a href="dindin-pudim.html" class="product-link"><div class="product-card"><img src="assets/dindin.png" alt="Bolo de Tapioca"><h3>Dindin Pudim</h3><p>Diferente e refrescante</p><span class="price">Unidade - R$ 8,00</span></div></a>
+                <a href="dindin-pudim.html" class="product-link"><div class="product-card"><img src="assets/dindin.png" alt="Bolo de Tapioca"><h3>Dindin Pudim</h3><p>A refrescância do dindin encontra a cremosidade do pudim!</p><span class="price">Unidade - R$ 8,00</span><span class="price">Leve 6 unidades - R$ 45,00</span></div></a>
             </div>
         </section>
         <section id="sobre" class="about-section">
@@ -59,60 +59,25 @@
                 <p>A Caramelo Real nasceu de uma paixão familiar por sobremesas que aquecem o coração. Cada pudim é feito de forma artesanal, seguindo receitas passadas por gerações, mas com um toque de modernidade. Usamos apenas ingredientes frescos e de alta qualidade para garantir uma experiência real em cada colherada.</p>
             </div>
         </section>
-
         <section id="contato" class="contact-section">
             <h2>Faça sua Encomenda</h2>
-            <p>Preencha os dados abaixo para solicitar um orçamento ou fazer seu pedido.</p>
-            
-            <form name="encomendas" method="POST" data-netlify="true" action="/obrigado.html" class="contact-form">
-                
+            <p>Preencha seus dados, selecione os produtos e nos envie seu pedido!</p>
+            <form name="encomendas" method="POST" data-netlify="true" action="obrigado.html" class="contact-form">
                 <input type="text" name="nome" placeholder="Seu nome completo" required>
                 <input type="email" name="email" placeholder="Seu melhor e-mail" required>
                 <input type="tel" name="telefone" placeholder="Seu Telefone / WhatsApp com DDD" required>
-
-                <fieldset class="product-order-fieldset">
-                    <legend>Selecione os Produtos</legend>
-                    <div class="product-order-list">
-                        <div class="product-order-item">
-                            <label for="pudim-tradicional">Pudim Tradicional</label>
-                            <input type="number" name="qtd-pudim-tradicional" id="pudim-tradicional" min="0" placeholder="0" class="quantity-input">
-                        </div>
-                        <div class="product-order-item">
-                            <label for="pudim-chocolate">Pudim de Chocolate Belga</label>
-                            <input type="number" name="qtd-pudim-chocolate" id="pudim-chocolate" min="0" placeholder="0" class="quantity-input">
-                        </div>
-                        <div class="product-order-item">
-                            <label for="mousse-maracuja">Mousse de Maracujá</label>
-                            <input type="number" name="qtd-mousse-maracuja" id="mousse-maracuja" min="0" placeholder="0" class="quantity-input">
-                        </div>
-                        <div class="product-order-item">
-                            <label for="mousse-limao">Mousse de Limão</label>
-                            <input type="number" name="qtd-mousse-limao" id="mousse-limao" min="0" placeholder="0" class="quantity-input">
-                        </div>
-                        <div class="product-order-item">
-                            <label for="bolo-tapioca">Bolo de Tapioca</label>
-                            <input type="number" name="qtd-bolo-tapioca" id="bolo-tapioca" min="0" placeholder="0" class="quantity-input">
-                        </div>
-                        <div class="product-order-item">
-                            <label for="salada-frutas">Salada de Frutas</label>
-                            <input type="number" name="qtd-salada-frutas" id="salada-frutas" min="0" placeholder="0" class="quantity-input">
-                        </div>
-                         <div class="product-order-item">
-                            <label for="manjar">Manjar dos Deuses</label>
-                            <input type="number" name="qtd-manjar" id="manjar" min="0" placeholder="0" class="quantity-input">
-                        </div>
-                         <div class="product-order-item">
-                            <label for="dindin">Dindin de Pudim</label>
-                            <input type="number" name="qtd-dindin" id="dindin" min="0" placeholder="0" class="quantity-input">
-                        </div>
+                <fieldset class="product-choice-fieldset">
+                    <legend>Escolha suas delícias</legend>
+                    <div class="product-choice-list">
+                        <label class="product-choice-item"><input type="checkbox" name="produto-selecionado[]" value="Pudim Tradicional" class="product-checkbox"><i class="fa-solid fa-plate-wheat product-icon"></i><span class="product-name">Pudim Tradicional</span><div class="quantity-selector"><label for="qtd-pudim-tradicional">Qtd:</label><input type="number" name="qtd-pudim-tradicional" id="qtd-pudim-tradicional" min="0" value="1" class="quantity-input"></div></label>
+                        <label class="product-choice-item"><input type="checkbox" name="produto-selecionado[]" value="Pudim de Chocolate" class="product-checkbox"><i class="fa-solid fa-bacon product-icon"></i><span class="product-name">Pudim de Chocolate</span><div class="quantity-selector"><label for="qtd-pudim-chocolate">Qtd:</label><input type="number" name="qtd-pudim-chocolate" id="qtd-pudim-chocolate" min="0" value="1" class="quantity-input"></div></label>
+                        <label class="product-choice-item"><input type="checkbox" name="produto-selecionado[]" value="Mousse de Maracujá" class="product-checkbox"><i class="fa-solid fa-lemon product-icon"></i><span class="product-name">Mousse de Maracujá</span><div class="quantity-selector"><label for="qtd-mousse-maracuja">Qtd:</label><input type="number" name="qtd-mousse-maracuja" id="qtd-mousse-maracuja" min="0" value="1" class="quantity-input"></div></label>
+                        <label class="product-choice-item"><input type="checkbox" name="produto-selecionado[]" value="Mousse de Limão" class="product-checkbox"><i class="fa-solid fa-seedling product-icon"></i><span class="product-name">Mousse de Limão</span><div class="quantity-selector"><label for="qtd-mousse-limao">Qtd:</label><input type="number" name="qtd-mousse-limao" id="qtd-mousse-limao" min="0" value="1" class="quantity-input"></div></label>
                     </div>
                 </fieldset>
-                
                 <textarea name="observacoes" rows="4" placeholder="Alguma observação? (Ex: data de entrega desejada, etc.)"></textarea>
-                
                 <button type="submit" class="btn-primary">Enviar Pedido</button>
             </form>
-            
             <div class="direct-contact">
                 <h3>Contato Direto e Redes Sociais</h3>
                 <div class="social-icons">
