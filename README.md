@@ -52,7 +52,7 @@ Este projeto foi desenvolvido e configurado por: Arthur Henrique Gomes de Olivei
 
 * [Fluxo de Caixa](https://github.com/SeuPesadel00/Fluxo-de-Caixa)
 * [Curriculo Interativo](https://github.com/SeuPesadel00/Curriculo-Interativo)
-* [Caramelo Real](https://github.com/SeuPesadel00/CarameloReal)
+* [Capital Daark](https://github.com/SeuPesadel00/CapitalDaark-new)
 * [Portifolio Sofia](https://github.com/SeuPesadel00/Portfolio-SofiaOliveira)
 
 **Contatos:**
